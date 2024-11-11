@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* bagian BODY  */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Bagian Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* LOGO */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* BAGIAN Nav */
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #575757;
+}
+
+/* EDIT Search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #218838;
+}
+
+/* EDIT Login */
+.login {
+    display: flex;
+    gap: 10px;
+}
+
+.login button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: #0056b3;
+}
+
+/* EDIT Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: calc(100% - 100px); 
+    }
+
+    .login {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        align-items: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+    }
+
+    .login {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .login button {
+        width: 100%;
+    }
+}
