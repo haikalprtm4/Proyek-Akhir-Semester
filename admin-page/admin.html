@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Tambah Produk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Admin - Tambah Produk</h1>
+    </header>
+    
+    <div class="form-container">
+        <form id="productForm">
+            <label for="name">Nama Produk:</label>
+            <input type="text" id="name" required>
+            
+            <label for="image">URL Gambar:</label>
+            <input type="text" id="image" required>
+            
+            <label for="price">Harga Produk:</label>
+            <input type="text" id="price" required>
+            
+            <label for="description">Deskripsi Produk:</label>
+            <textarea id="description" required></textarea>
+            
+            <button type="submit">Tambah Produk</button>
+        </form>
+    </div>
+    
+    <div class="product-list">
+        <h2>Daftar Produk</h2>
+        <div id="productList"></div>
+    </div>
+    
+    <script src="admin.js"></script>
+</body>
+</html>
