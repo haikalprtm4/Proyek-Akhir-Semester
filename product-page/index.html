@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cea Shoper</title>
-    <script src="main.js"></script>
     <link rel="stylesheet" href="/product-page/style.css">
 </head>
 <body>
@@ -18,6 +17,10 @@
             <a href="#contact">Contact</a>
             <!--<a href="#cart" class="cart-button">Cart</a>-->
         </nav>
+
+        <div class="cart-container">
+            <button id="cart-button" onclick="checkout()">Keranjang (0)</button>
+        </div>
         
         <div class="search-bar">
             <input type="text" id="search" placeholder="Cari produk...">
@@ -32,8 +35,8 @@
     <main>
         <!--Home Page-->
         <section id="product-page" class="product-page">
-            <div class="container-product">
-                <div class="top-product">
+            <div class="container">
+                <div class="tilte-product">
                     <div class="judul">
                         <h2>Product</h2>
                     </div>
@@ -41,17 +44,13 @@
 
                     </div>
                 </div>
-                <div class="card-product">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+                <div class="product-container" id="product-container">
+                <!-- Card Produk Akan Dimasukkan di Sini oleh JavaScript -->
                 </div>
-
             </div>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
