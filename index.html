@@ -1,131 +1,225 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cea Shoper</title>
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <title>Cea Shopper</title>
+
+    <!-- FONT--AWESOME CDN LINK -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+
+    <!--CSS LINK -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--TAHAP 1-->
+
 </head>
 <body>
-    <!--Navbar-->
-    <header class="header">
-        <div class="logo">Cea Shoper</div>
-        <nav class="nav">
-            <a href="#home">Home</a>
-            <a href="#shop">Shop</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Cari produk...">
-            <button onclick="searchProduk()">Cari</button>
-           
-        <div class="login">
-            <button onclick="">SIGN UP</button>
-            <button onclick="window.location.href='loginpage/login.html'">LOGIN</button>
+
+
+    <!--HEADER-->
+
+
+    <section id="header">
+        <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
         </div>
-    </header>
-<!--UNTUK DOKUMENTASI TAHAP 1-->
-    <main>
-        <!--flip card 1-->
-        <div class="card-container">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="https://edjvntge.uk/cdn/shop/files/C87E67E1-B301-4EB0-91D8-E8DD6843C488.jpg?v=1716136383">
-                        <h2>PAKAIAN</h2>
+        <div id="mobile">
+            <a href="car.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="hero">
+        <h4>Tempat Belanja Online Terbaik</h4>
+        <h2>CEA SHOPPER </h2>
+        <h1>Mulai Dari Rp20.000</h1>
+        <p>Ayo Belanja Sekarang</p>
+        <button>Shop Now</button>
+    </section>
+     
+    <!--DAFTAR PRODUCT-->
+
+    <section id="product1" class="section-p1">
+        <h2>Product Unggulan</h2>
+        <p>Desain Modern Terbaru</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="KOSONG" alt="">
+                <div class="des">
+                    <span>KOSONG</span>
+                    <h5>KOSONG</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <div class="flip-card-back">
-                        <h2>CLOTHES</h2>
-                        <p>Belanja Pakaian Murah Hanya Disini.</p>
-                        <button>Shop Now</button>
+                    <h4>KOSONG</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="KOSONG" alt="">
+                <div class="des">
+                    <span>KOSONG</span>
+                    <h5>KOSONG</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
+                    <h4>KOSONG</h4>
                 </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
-             <!-- Flip Card 2 -->
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="https://down-id.img.susercontent.com/file/id-11134207-23010-1qqwzphvhbmv4a">
-                <h2>SEPATU</h2>
+            <div class="pro">
+                <img src="KOSONG" alt="">
+                <div class="des">
+                    <span>KOSONG</span>
+                    <h5>KOSONG</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KOSONG</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
-            <div class="flip-card-back">
-                <h2>SHOES</h2>
-                <p>Belanja Sepatu Murah Hanya Disini.</p>
-                <button>Shop Now</button>
+            <div class="pro">
+                <img src="KOSONG" alt="">
+                <div class="des">
+                    <span>KOSONG</span>
+                    <h5>KOSONG</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KOSONG</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="KOSONG" alt="">
+                <div class="des">
+                    <span>KOSONG</span>
+                    <h5>KOSONG</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KOSONG</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="KOSONG" alt="">
+                <div class="des">
+                    <span>KOSONG</span>
+                    <h5>KOSONG</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KOSONG</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="KOSONG" alt="">
+                <div class="des">
+                    <span>KOSONG</span>
+                    <h5>KOSONG</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KOSONG</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="" alt="">
+                <div class="des">
+                    <span>KOSONG</span>
+                    <h5>KOSONG</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>KOSONG</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
         </div>
-    </div>
-        <!-- Flip Card 3 -->
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98v-lpx687du1xwu25">
-                    <h2>ACTION FIGURE</h2>
-                </div>
-                <div class="flip-card-back">
-                    <h2>ACTION FIGURE</h2>
-                    <p>Beli ACTION FIGURE Bagus Disini</p>
-                    <button>Shop Now</button>
+    </section>
+
+    <!-- Bagian LOGIN EMAIL -->
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Masuka Email</h4>
+            <p>Masukan Email Dan Mulai Berbelanja<span> Sekarang</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Masukkan email anda">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="kosong" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Untag-Surabaya</p>
+            <p><strong>Phone:</strong> +62 87787409571</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Senin - Sabtu</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f">Bekantan TER</i>
+                    <i class="fab fa-twitter">BekantanOficcial</i>
+                    <i class="fab fa-instagram">BekantanCuyy</i>
+                    <i class="fab fa-youtube">Bekantan Gaming</i>
                 </div>
             </div>
         </div>
-    </div>
-</main>
-    <!--UNTUK DOKUMENTASI TAHAP 2-->
-    <div class="container">
-        <h1>REKOMENDASI</h1>
-        <div class="row">
-            <div class="col">
-                <img src="https://img.lazcdn.com/g/p/a515d1698b4a4db90d4a39a6b4bea19a.jpg_720x720q80.jpg" alt="">
-                <p>GET FASHION - BAJU KAOS WANITA ESCAPE YOUR BEAR DEWASA</p>
-                <h4>Rp45.000 </h4>
-                <button class="category-button">BELI</button>
-            </div>
-            <div class="col">
-                <img src="https://www.figurestoycompany.com/cdn/shop/files/dc-comics-retro-8-inch-action-figures-new-head-sculpt-superman-with-retro-like-card-early-bird-edition-28721991581741_1200x.jpg?v=1694342531" alt="">
-                <p>DC Comics Retro Figures: New Head Sculpt Superman with Retro Card - Figures Toy Company</p>
-                <h4>Rp120.000 </h4>
-                <button class="category-button">BELI</button>
-            </div>
-            <div class="col">
-                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/115/MTA-129994477/brd-44261_larocking-dexter-putih-polos-sepatu-sneakers-running-gym-shoes-putih-polos-39_full02-cabf2473.jpg" alt="">
-                <p>Promo Larocking - Dexter Putih Polos | Sepatu Sneakers Running Gym Shoes - Putih Polos, 39 - 4..</p>
-                <h4>Rp250.000 </h4>
-                <button class="category-button">BELI</button>
-            </div>
-            <div class="col">
-                <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98w-m08579bgswr066" alt="">
-                <p>Jaket Varsity RIIZE Rise & Realize - Free Photocard - ID Card - Packaging With Box - Size M-XXL</p>
-                <h4>Rp280.000 </h4>
-                <button class="category-button">BELI</button>
-            </div>
-            <div class="col">
-                <img src="https://hypesneakerid.com/wp-content/uploads/2023/07/02885-web.jpg" alt="">
-                <p>Celana OFF WHITE AIRPORT TAPE ARROW BLACK SHORT PANTS 100% ORIGINAL - HYPESNEAKER.ID</p>
-                <h4>Rp80.000 </h4>
-                <button class="category-button">BELI</button>
-            </div>
-            <div class="col">
-                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2020/10/9/002d81d6-f7d4-4a2d-ad96-ed381d3ac8f8.jpg" alt="">
-                <p>SEPATU VANS SLIP ON CHECKERBOARD PLAYING CARD TRUE WHITE // TERSEDIA SEMUA UKURAN
-                </p>
-                <h4>Rp300.000 </h4>
-                <button class="category-button">BELI</button>
-            </div>
-            <div class="col">
-                <img src="https://images.tokopedia.net/img/cache/700/product-1/2019/11/18/210/210_347ce44f-6255-4417-b9d8-bd6691d28177_700_700" alt="">
-                <p>MINISO TOPI MARVEL CAPTAIN AMERICA CARTOON CHIBI IMUT CUTE BASEBALL // TOPI KEREN TERKINI</p>
-                <h4>Rp80.000 </h4>
-                <button class="category-button">BELI</button>
-            </div>
-            <div class="col">
-                <img src="https://s0.bukalapak.com/img/00054884203/s-463-463/data.jpeg.webp" alt="">
-                <p>Jual Produk Kaos Mobile Legend Alucard Termurah dan Terlengkap November 2024 | BAJU TERBAGUS  ABAD INI</p>
-                <h4>Rp80.000 </h4>
-                <button class="category-button">BELI</button>
-            </div>
+        <div class="copyright">
+            <p>Tugas Semester 1 Pemrogaman Web  | &#169; 2024</p>
+        </div>
+    </footer>
+
+    <!-- javascript script file / link -->
+    <script src="js/script.js"></script>
 </body>
 </html>
