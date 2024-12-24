@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cea Shopper</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="/css/cart.css">
+
+    
+
+</head>
+
+<body>
+    
+
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <h2>Masukkan Data Diri dan Alamat</h2>
+            <form id="checkoutForm">
+                <label for="name">Nama Lengkap:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="number">Nomor Telp / Whatsapp:</label>
+                <input type="number" id="nomor" name="number" required>
+    
+                <label for="address">Alamat Lengkap:</label>
+                <textarea id="address" name="address" required></textarea>
+    
+                <label for="shipping">Pilih Paket Pengiriman:</label>
+                <select id="shipping" name="shipping">
+                    <option value="standard">Standard (4 hari)</option>
+                    <option value="express">Express (2 hari)</option>
+                </select>
+    
+                <button class="buttony" type="submit">Kirim</button>
+                <button class="buttony" type="button" id="cancelCheckout">Batal</button>
+            </form>
+        </div>
+    </div>
+
+
+    <section id="header">
+        <div style="display: flex; align-items: center;">
+            <img src="photos/ss.jpg" style="border-radius: 20px; width: 50px; height: auto;" class="logo" alt="">
+            <p style="margin-left: 10px; margin: 10px; font-family: 'Times New Roman', Times, serif; font-size: 20px;" >The Cea Shopper</p>
+          </div>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>#Ayo Belanja Sekarang Juga</h2>
+        <p>Sebelum Kehabisan</p>
+    </section>
+    <section id="cart" class="section-p1">
+        <div style="width: fit-content; border: 1px solid #e2e9e1; padding: 10px; margin: 20px auto; border-radius: 20px;">
+            <h1 style="margin: 0;">Keranjang</h1>
+        </div>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody id="cart-body">
+                <!-- Item cart dimuat di sini -->
+            </tbody>
+        </table>
+    </section>
+    
+    <section id="cart-add" class="section-p1">
+        <div class="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Harga</td>
+                    <td id="cart-subtotal">$ 0</td>
+                </tr>
+                <tr>
+                    <td>Pajak Pengiriman</td>
+                    <td>Gratis</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id="cart-total"><strong>$ 0</strong></td>
+                </tr>
+            </table>
+            <button class="buttonsz" onclick="checkoutCart()">Proceed to checkout</button>
+        </div>
+    </section>
+
+<!--UNTUK TAMPILAN PRODUK YANG SUDAH DIBELI-->
+
+<section id="order" class="section-p1"></section>
+<div style="width: fit-content; border: 1px solid #e2e9e1; padding: 10px; margin: auto; border-radius: 20px;">
+    <h1>PESANAN ANDA</h1>
+</div>
+    <section id="beli" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody id="beli-product">
+                <!-- Item yang dibeli akan di-load secara dinamis di sini -->
+            </tbody>
+        </table>
+    </section>
+
+    
+
+    <!-- Fotter -->
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="kosong" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Untag-Surabaya</p>
+            <p><strong>Phone:</strong> +62 87787409571</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Senin - Sabtu</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Tugas Semester 1 Pemrogaman Web  | &#169; 2024</p>
+        </div>
+    </footer>
+
+    <!-- JS LINK -->
+    <script src="js/script.js"></script>
+    <script src="js/localstorage.js"></script>
+</body>
+</html>

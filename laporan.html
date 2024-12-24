@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan - Cea Shopper</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+    <section id="header">
+        <h2 class="peg">Dashboard</h2>
+        <h2 style="padding-left: 1300px;"><a href="admin.html"><i class="far fa-briefcase"></i></a></h2>
+        <h2 style="margin-left: 10px; margin-right: 10px;"><a href="massage.html"><i class="far fa-envelope"></i></a></h2>
+        <h2 class="los"><a href="login.html"><i class="far fa-sign-out"></i></a></h2>
+    </section>
+    <section class="section-p1">    
+        <h2>Laporan</h2>
+    <section id="laporan">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Pembeli</th>
+                    <th>Nomor</th>
+                    <th>Alamat</th>
+                    <th>Produk</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Paket Pengiriman</th>
+                </tr>
+            </thead>
+            <tbody id="laporanBody">
+                <!-- Data pembelian dimuat di sini -->
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const loggedIn = localStorage.getItem("loggedIn") === "true";
+    const loginButton = document.querySelector(".los");
+
+    loginButton.onclick = function () {
+        if (loggedIn) {
+            localStorage.removeItem("loggedIn");
+            localStorage.removeItem("username");
+            alert("Anda berhasil logout.");
+            window.location.reload();
+        } else {
+            alert("Anda Berhasil Logout");
+        }
+    };
+});
+
+function formatHarga(harga) {
+    return 'Rp' + harga.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
+
+const purchasedItems = JSON.parse(localStorage.getItem('purchased')) || [];
+
+const laporanBody = document.getElementById('laporanBody');
+
+purchasedItems.forEach(item => {
+    const row = document.createElement('tr');
+
+    if (item.buyer) {
+        row.innerHTML = `
+            <td>${item.buyer.name}</td>
+            <td>${item.buyer.number}</td>
+            <td>${item.buyer.address}</td>
+            <td><img src="${item.image}" width="50"></td>
+            <td>${formatHarga(item.price)}</td> <!-- Memformat harga -->
+            <td>${item.quantity}</td>
+            <td>${item.buyer.shipping === 'standard' ? 'Standard (4 hari)' : 'Express (2 hari)'}</td>
+        `;
+    } else {
+        row.innerHTML = `<td colspan="7">Data pembeli tidak tersedia</td>`;
+    }
+
+    laporanBody.appendChild(row);
+});
+
+    </script>
+
+</body>
+</html>

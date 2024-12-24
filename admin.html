@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cea Shopper - Admin Panel</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+    
+
+    <section id="header">
+        <h2 class="peg">Dashboard</h2>
+        <h2 style="padding-left: 1300px;"><a href="laporan.html"><i class="far fa-book"></i></a></h2>
+        <h2 style="margin-left: 10px; margin-right: 10px;"><a href="massage.html"><i class="far fa-envelope"></i></a></h2>
+        <h2 class="los"><a href="login.html"><i class="far fa-sign-out"></i></a></h2>
+    </section>
+    <section class="section-p1">    
+        <h2>Manage Products</h2>
+        <form id="product-form">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list">
+                    <tr id="admin-product1">
+                        <td><img src="/photos/products/kemeja1.jpg" alt="kemeja"></td>
+                        <td><input type="text" value="Kemeja Pria Lengan Pendek" readonly></td>
+                        <td><input type="text" id="price-input" value="39.000" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product2')">Remove</button>
+                            <button onclick="showProduct('product2')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>  
+                    <tr id="admin-product3">
+                        <td><img src="/photos/products/ransel1.jpg" alt="ransel"></td>
+                        <td><input type="text" value="Tas Ransel Sekolah Pria Wanita" readonly></td>
+                        <td><input type="text" id="price-input" value="45.000" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product3')">Remove</button>
+                            <button onclick="showProduct('product3')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>
+                    <tr id="admin-product4">
+                        <td><img src="/photos/products/hoddie1.jpg" alt="hoddie1"></td>
+                        <td><input type="text" value="JAKET HODDIE POLOS ORIGINAL" readonly></td>
+                        <td><input type="text" id="price-input" value="50.000" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product4')">Remove</button>
+                            <button onclick="showProduct('product4')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>
+                    <tr id="admin-product5">
+                        <td><img src="/photos/products/celana1.jpg" alt="sepatu1"></td>
+                        <td><input type="text" value="Screamous Long Pants Cargo" readonly></td>
+                        <td><input type="text" id="price-input" value="136.000" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product5')">Remove</button>
+                            <button onclick="showProduct('product5')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>
+                    <tr id="admin-product6">
+                        <td><img src="/photos/products/baju4.jpg" alt="baju1"></td>
+                        <td><input type="text" value="Baju Hitam Polos" readonly></td>
+                        <td><input type="text" id="price-input" value="30.000" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product6')">Remove</button>
+                            <button onclick="showProduct('product6')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>
+                    <tr id="admin-product7">
+                        <td><img src="/photos/products/celpen1.jpg" alt="baju1"></td>
+                        <td><input type="text" value="Cargo Pria Matt Fleece" readonly></td>
+                        <td><input type="text" id="price-input" value="51.500" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product7')">Remove</button>
+                            <button onclick="showProduct('product7')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>
+                    <tr id="admin-product8">
+                        <td><img src="/photos/products/gamis1.jpg" alt="baju1"></td>
+                        <td><input type="text" value="Gamis Polos Stylish" readonly></td>
+                        <td><input type="text" id="price-input" value="54.000" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product8')">Remove</button>
+                            <button onclick="showProduct('product8')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>
+                    <tr id="admin-product9">
+                        <td><img src="/photos/products/jaket1.png" alt="baju1"></td>
+                        <td><input type="text" value="Jaket Hoddie Pria Wanita Tebal" readonly></td>
+                        <td><input type="text" id="price-input" value="150.000" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product9')">Remove</button>
+                            <button onclick="showProduct('product9')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>
+                    <tr id="admin-product10">
+                        <td><img src="/photos/products/bajubel1.jpg" alt="baju1"></td>
+                        <td><input type="text" value="Green Army Tees" readonly></td>
+                        <td><input type="text" id="price-input" value="50.000" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product10')">Remove</button>
+                            <button onclick="showProduct('product10')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>
+                    <tr id="admin-product11">
+                        <td><img src="/photos/products/sepatu1.jpg" alt="baju1"></td>
+                        <td><input type="text" value="Sepatu Ujung Besi" readonly></td>
+                        <td><input type="text" id="price-input" value="122.000" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product11')">Remove</button>
+                            <button onclick="showProduct('product11')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>
+                    <tr id="admin-product12">
+                        <td><img src="/photos/products/jacket1.jpg" alt="baju1"></td>
+                        <td><input type="text" value="Jacket Pria Welder" readonly></td>
+                        <td><input type="text" id="price-input" value="100.000" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product12')">Remove</button>
+                            <button onclick="showProduct('product12')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>
+                    <tr id="admin-product13">
+                        <td><img src="/photos/products/sandal1.jpg" alt="baju1"></td>
+                        <td><input type="text" value="Sandal Slop Pria Trendy" readonly></td>
+                        <td><input type="text" id="price-input" value="50.000" oninput="formatPrice(this)"></td>
+                        <td><input type="number" id="stock-input" value="50" min="0"></td>
+                        <td class="actions">
+                            <button onclick="hideProduct('product13')">Remove</button>
+                            <button onclick="showProduct('product13')">Add</button>
+                            <button type="button" id="save-button">Simpan</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const loggedIn = localStorage.getItem("loggedIn") === "true";
+    const loginButton = document.querySelector(".los");
+
+    loginButton.onclick = function () {
+        if (loggedIn) {
+            localStorage.removeItem("loggedIn");
+            localStorage.removeItem("username");
+            alert("Anda berhasil logout.");
+            window.location.reload();
+        } else {
+            alert("Anda Berhasil Logout");
+        }
+    };
+});
+
+function formatPrice(input) {
+    let value = input.value.replace(/[^\d,.-]/g, '');
+    let parts = value.split(',');
+    let integerPart = parts[0];
+    let decimalPart = parts[1] || '';
+    integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    let formattedValue = integerPart;
+    if (decimalPart) {
+        formattedValue += ',' + decimalPart.substring(0, 2); 
+    }
+    input.value = formattedValue;
+}
+
+
+function hideProduct(productId) {
+            let hiddenProducts = JSON.parse(localStorage.getItem("hiddenProducts")) || [];
+            if (!hiddenProducts.includes(productId)) {
+                hiddenProducts.push(productId);
+                localStorage.setItem("hiddenProducts", JSON.stringify(hiddenProducts));
+            }
+            alert(`Product ${productId} berhasil dihapus dari shop!`);
+        }
+
+
+        function showProduct(productId) {
+            let hiddenProducts = JSON.parse(localStorage.getItem("hiddenProducts")) || [];
+            hiddenProducts = hiddenProducts.filter(id => id !== productId);
+            localStorage.setItem("hiddenProducts", JSON.stringify(hiddenProducts));
+            alert(`Product ${productId} berhasil ditampilkan kembali di shop!`);
+        }
+
+        function saveProduct(button) {
+    const row = button.closest("tr");
+    const productName = row.querySelector("td:nth-child(2) input").value;
+    const price = row.querySelector("td:nth-child(3) input").value;
+    const stock = row.querySelector("td:nth-child(4) input").value;
+
+
+    if (isNaN(stock) || stock < 0) {
+        alert("Stok harus berupa angka yang lebih besar atau sama dengan 0.");
+        return;
+    }
+
+
+    let productData = JSON.parse(localStorage.getItem(productName));
+    
+    if (!productData) {
+        productData = {
+            price: price,
+            stock: 0 
+        };
+    }
+
+   productData.price = price;
+   productData.stock = stock;
+
+localStorage.setItem(productName, JSON.stringify(productData));
+
+
+console.log("Data produk disimpan:", productData);
+alert(`${productName} berhasil disimpan dengan harga: ${price} dan stok: ${stock}`);
+}
+
+
+document.querySelectorAll("#save-button").forEach(button => {
+    button.addEventListener("click", function() {
+        saveProduct(this);
+    });
+});        
+
+</script>
+
+</body>
+
+</html>

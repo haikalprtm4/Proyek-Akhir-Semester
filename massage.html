@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan - Cea Shopper</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+    <section id="header">
+        <h2 class="peg">Dashboard</h2>
+        <h2 style="padding-left: 1300px;"><a href="admin.html"><i class="far fa-briefcase"></i></a></h2>
+        <h2 style="margin-left: 10px; margin-right: 10px;"><a href="massage.html"><i class="far fa-envelope"></i></a></h2>
+        <h2 class="los"><a href="login.html"><i class="far fa-sign-out"></i></a></h2>
+    </section>
+
+    <section class="section-p1" id="pesanCustomer">
+        <h2>Pesan Dari Pengguna</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Pengirim</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Pesan</th>
+                    <th>Hapus</th>
+                </tr>
+            </thead>
+            <tbody id="pesanMasuk">
+                <!-- Pesan dimuat di sini -->
+            </tbody>
+        </table>
+    </section>
+    
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const loggedIn = localStorage.getItem("loggedIn") === "true";
+    const loginButton = document.querySelector(".los");
+
+    loginButton.onclick = function () {
+        if (loggedIn) {
+            localStorage.removeItem("loggedIn");
+            localStorage.removeItem("username");
+            alert("Anda berhasil logout.");
+            window.location.reload();
+        } else {
+            alert("Anda Berhasil Logout");
+        }
+    };
+});
+        let messages = JSON.parse(localStorage.getItem("messages")) || [];
+        const tbody = document.getElementById("pesanMasuk");
+    
+        function renderMessages() {
+            tbody.innerHTML = "";
+            messages.forEach((msg, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${msg.name}</td>
+                    <td>${msg.email}</td>
+                    <td>${msg.subject}</td>
+                    <td>${msg.message}</td>
+                    <td>
+                        <button onclick="deleteMessage(${index})">Hapus</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+    
+        function deleteMessage(index) {
+            if (confirm("Apakah Anda yakin ingin menghapus pesan ini?")) {
+                messages.splice(index, 1);
+                localStorage.setItem("messages", JSON.stringify(messages));
+                renderMessages();
+            }
+        }
+    
+
+        renderMessages();
+    </script>
+</body>
+</html>

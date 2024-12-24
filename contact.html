@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cea Shopper</title>
+
+    <!-- FONT--AWESOME CDN LINK -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+
+    <!--CSS LINK -->
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!--TAHAP 1-->
+
+</head>
+<body>
+
+
+    <!--HEADER-->
+
+
+    <section id="header">
+        <div style="display: flex; align-items: center;">
+            <img src="photos/ss.jpg" style="border-radius: 20px; width: 50px; height: auto;" class="logo" alt="">
+            <p style="margin-left: 10px; margin: 10px; font-family: 'Times New Roman', Times, serif; font-size: 20px;" >The Cea Shopper</p>
+          </div>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="#"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="form-details">
+        <form id="contactForm">
+            <span>Tinggalkan Pesan Anda</span>
+            <h2>Kami senang mendengar kabar dari Anda</h2>
+            <input type="text" id="inputName" placeholder="Your Name" required>
+            <input type="email" id="inputEmail" placeholder="E-mail" required>
+            <input type="text" id="inputSubject" placeholder="Subject" required>
+            <textarea id="inputMessage" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button class="normalsz" type="submit">Submit</button>
+        </form>
+        <div class="people">
+            <div>
+                <img src="/photos/profile.png" alt="1">
+                <p><span>Mohammad Rizky</span> Owner Cea Shopper<br>Phone: +62 877 8740 9571<br>Email: rizkyyoga2412@gmail.com</p>
+            </div>
+            <div>
+                <img src="/photos/profile.png" alt="2">
+                <p><span>Haikal Putra</span> Owner Cea Shopper<br>Phone: +62 857 8461 4299<br>Email: muhammadhaikalpratamaputra@gmail.com</p>
+            </div>
+            <div>
+                <img src="/photos/profile.png" alt="3">
+                <p><span>Fauzi Alvian</span> Owner Cea Shopper<br>Phone: +62 819 3432 0231<br>Email: fauzialvian69@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bagian LOGIN EMAIL -->
+     
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Apa anda sudah punya akun?</h4>
+            <p>Masukkan Email Dan Mulai Berbelanja<span> Sekarang</span></p>
+        </div>
+        <div class="form">
+            <a href="login.html">
+            <button class="buttonsz">Login Untuk Berbelanja</button>
+            </a>
+            <h1>CEA SHOPPER</h1>
+        </div>
+    </section>
+
+    <!-- Fotter -->
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="kosong" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Untag-Surabaya</p>
+            <p><strong>Phone:</strong> +62 87787409571</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Senin - Sabtu</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Tugas Semester 1 Pemrogaman Web  | &#169; 2024</p>
+        </div>
+    </footer>
+
+    <!-- JS LINK -->
+     <script>
+
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("inputName").value;
+        const email = document.getElementById("inputEmail").value;
+        const subject = document.getElementById("inputSubject").value;
+        const message = document.getElementById("inputMessage").value;
+
+        const messages = JSON.parse(localStorage.getItem("messages")) || [];
+
+        messages.push({ name, email, subject, message });
+
+        localStorage.setItem("messages", JSON.stringify(messages));
+
+        alert("Pesan berhasil dikirim!");
+        this.reset();
+    });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const loggedIn = localStorage.getItem("loggedIn") === "true";
+        const loginButton = document.querySelector(".buttonsz");
+
+    if (loggedIn) {
+        loginButton.textContent = "Logout";
+        loginButton.onclick = function () {
+        localStorage.removeItem("loggedIn");
+        localStorage.removeItem("username");
+        alert("Anda berhasil logout.");
+        window.location.reload();
+      };
+     }
+});
+     </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

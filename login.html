@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    html {
+      background-color: #ebeef1;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      color: #495057; 
+    }
+
+    .container {
+      max-width: 400px;  
+      margin: auto;
+      background: #fcfcfc;  
+      padding: 40px;
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);  
+      display: flex;
+      flex-direction: column;  
+      align-items: center;  
+      height: auto; 
+      margin-top: 180px;  
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2em;  
+      color: #5a60d8;  
+      margin-bottom: 20px;  
+    }
+
+    .form-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5em;  
+      color: #343a40; 
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+      width: 100%;  
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .input-group input {
+      margin-right: 100px;
+      width: 92%;  
+      padding: 10px;
+      border: 1px solid #ced4da;
+      border-radius: 5px;  
+      transition: border 0.3s, box-shadow 0.3s;  
+    }
+
+    .input-group input:focus {
+      border-color: #5a60d8;  
+      box-shadow: 0 0 5px rgba(90, 96, 216, 0.5);
+      outline: none;  
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      width: 100%;  
+    }
+
+    .checkbox-group input {
+      margin-right: 5px;
+    }
+
+    button {
+      width: 100%;  
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #5a60d8;
+      color: white;
+      cursor: pointer;
+      font-size: 1em;  
+      transition: background-color 0.3s, transform 0.2s;  
+    }
+
+    button:hover {
+      background-color: #434da7;
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    p {
+      text-align: center;
+      margin-top: 15px;  
+      font-size: 0.9em;  
+    }
+
+    a {
+      color: #5a60d8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="form-title" class="form-title">Login</div>
+
+    <div id="login-form">
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="show-password-login" onclick="togglePassword('login')">
+        <label for="show-password-login">Show Password</label>
+      </div>
+
+      <button onclick="login()">Login</button>
+      <p>Belum punya akun? <a href="#" onclick="showRegisterForm()">Register</a></p>
+    </div>
+
+    <div id="register-form" style="display: none;">
+      <div class="input-group">
+        <label for="register-username">Username:</label>
+        <input type="text" id="register-username" required>
+      </div>
+      <div class="input-group">
+        <label for="register-password">Password:</label>
+        <input type="password" id="register-password" required>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="show-password-register" onclick="togglePassword('register')">
+        <label for="show-password-register">Show Password</label>
+      </div>
+
+      <button onclick="register()">Register</button>
+      <p>Sudah punya akun? <a href="#" onclick="showLoginForm()">Login</a></p>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword(form) {
+      if (form === 'login') {
+        var passwordField = document.getElementById('password');
+        var checkbox = document.getElementById('show-password-login');
+      } else if (form === 'register') {
+        var passwordField = document.getElementById('register-password');
+        var checkbox = document.getElementById('show-password-register');
+      }
+
+
+      if (checkbox.checked) {
+        passwordField.type = 'text';  
+      } else {
+        passwordField.type = 'password';  
+      }
+    }
+
+    function showLoginForm() {
+      document.getElementById("login-form").style.display = "block";
+      document.getElementById("register-form").style.display = "none";
+      document.getElementById("form-title").innerText = "Login"; 
+    }
+
+    function showRegisterForm() {
+      document.getElementById("login-form").style.display = "none";
+      document.getElementById("register-form").style.display = "block";
+      document.getElementById("form-title").innerText = "Register";
+    }
+
+    function register() {
+      const username = document.getElementById("register-username").value;
+      const password = document.getElementById("register-password").value;
+
+      if (!username || !password) {
+        alert("Anda Belum Mengsis Form!");
+        return;
+      }
+
+      if (localStorage.getItem(username)) {
+        alert("Username sudah digunakan!");
+        return;
+      }
+
+      localStorage.setItem(username, password);
+      alert("Register berhasil! Silakan login.");
+      showLoginForm();
+    }
+
+  function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  if (!username || !password) {
+    alert("Anda Belum Mengisi Form!");
+    return;
+  }
+
+  // USERNAME DAN PASSWORD UNTUK ADMIN
+  if (username === "admin" && password === "admin") {
+    localStorage.setItem("loggedIn", "true");
+    localStorage.setItem("username", username);
+    alert("Login berhasil sebagai Admin!");
+    window.location.href = "admin.html"; 
+    return;
+  }
+
+  const storedPassword = localStorage.getItem(username);
+  if (storedPassword === password) {
+    localStorage.setItem("loggedIn", "true");
+    localStorage.setItem("username", username);
+    alert("Login berhasil! Selamat datang, " + username + ".");
+    window.location.href = "index.html";
+  } else {
+    alert("Username atau password salah!");
+  }
+}
+  </script>
+</body>
+</html>

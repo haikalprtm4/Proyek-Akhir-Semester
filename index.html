@@ -22,7 +22,10 @@
 
 
     <section id="header">
-        <a href="#"><img src="kosong" class="logo" alt=""></a>
+        <div style="display: flex; align-items: center;">
+            <img src="photos/ss.jpg" style="border-radius: 20px; width: 50px; height: auto;" class="logo" alt="">
+            <p style="margin-left: 10px; margin: 10px; font-family: 'Times New Roman', Times, serif; font-size: 20px;" >The Cea Shopper</p>
+          </div>
         <div>
             <ul id="navbar">
                 <li><a class="active" href="index.html">Home</a></li>
@@ -42,158 +45,180 @@
     <section id="hero">
         <h4>Tempat Belanja Online Terbaik</h4>
         <h2>CEA SHOPPER </h2>
-        <h1>Mulai Dari Rp20.000</h1>
+        <h1>Dengan Harga Terjangkau</h1>
         <p>Ayo Belanja Sekarang</p>
-        <button>Shop Now</button>
+        <button onclick="window.location.href='shop.html' ">Shop Now</button>
     </section>
      
-    <!--DAFTAR PRODUCT-->
+    <!--NOTIFIKASI KERANJANG BELANJA-->
+
+    <div id="confirmAst" class="confirm-modal">
+        <div class="confirm-modal-content">
+            <p id="confirmMessage"></p>
+            <div class="confirm-buttons">
+                <button id="confirmYes" class="confirm-btn">Tambahkan</button>
+                <button id="confirmNo" class="confirm-btn">Batal</button>
+            </div>
+        </div>
+    </div>
+
+
+     <!--DAFTAR PRODUCT-->
 
     <section id="product1" class="section-p1">
         <h2>Product Unggulan</h2>
         <p>Desain Modern Terbaru</p>
         <div class="pro-container">
-            <div class="pro">
-                <img src="KOSONG" alt="">
-                <div class="des">
-                    <span>KOSONG</span>
-                    <h5>KOSONG</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <<div class="pro-container">
+                <div class="pro" id="product2" ondblclick="window.location.href='/shop/kemeja1.html';">
+                    <img src="photos/products/kemeja1.jpg" alt="kemeja1">
+                    <div class="des">
+                        <span>G-BEST</span>
+                        <h5>Kemeja Pria Lengan Pendek</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 id="price-product2">Rp39.000</h4>
                     </div>
-                    <h4>KOSONG</h4>
+                    <i class="fas fa-shopping-cart cart" onclick="addToCart('Kemeja Pria Lengan Pendek', 39000, 'photos/products/kemeja1.jpg')"></i>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="KOSONG" alt="">
-                <div class="des">
-                    <span>KOSONG</span>
-                    <h5>KOSONG</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="pro" id="product3" ondblclick="window.location.href='/shop/ransel1.html';">
+                    <img src="photos/products/ransel1.jpg" alt="">
+                    <div class="des">
+                        <span>BETTERHALF</span>
+                        <h5>Tas Ransel Sekolah Pria Wanita</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 id="price-product3">Rp45.000</h4>
                     </div>
-                    <h4>KOSONG</h4>
+                    <i class="fas fa-shopping-cart cart" onclick="addToCart('Tas Ransel Sekolah Pria Wanita', 45000, 'photos/products/ransel1.jpg')"></i>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="KOSONG" alt="">
-                <div class="des">
-                    <span>KOSONG</span>
-                    <h5>KOSONG</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="pro" id="product4" ondblclick="window.location.href='/shop/hoddie1.html';">
+                    <img src="photos/products/hoddie1.jpg" alt="hoddie1">
+                    <div class="des">
+                        <span>PREMIUM</span>
+                        <h5>JAKET HOODIE POLOS ORIGINAL</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 id="price-product4">Rp50.000</h4>
                     </div>
-                    <h4>KOSONG</h4>
+                    <i class="fas fa-shopping-cart cart" onclick="addToCart('JAKET HOODIE POLOS ORIGINAL', 50000, 'photos/products/hoddie1.jpg')"></i>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="KOSONG" alt="">
-                <div class="des">
-                    <span>KOSONG</span>
-                    <h5>KOSONG</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="pro" id="product5" ondblclick="window.location.href='/shop/celpan1.html';">
+                    <img src="/photos/products/celana1.jpg" alt="celpan1">
+                    <div class="des">
+                        <span>SIERA GREY</span>
+                        <h5>Screamous Long Pants Cargo</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 id="price-product5">Rp136.000</h4>
                     </div>
-                    <h4>KOSONG</h4>
+                    <i class="fas fa-shopping-cart cart" onclick="addToCart('Screamous Long Pants Cargo', 136000, 'photos/products/celana1.jpg')"></i>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="KOSONG" alt="">
-                <div class="des">
-                    <span>KOSONG</span>
-                    <h5>KOSONG</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="pro" id="product6" ondblclick="window.location.href='/shop/baju1.html';">
+                    <img src="/photos/products/baju4.jpg" alt="bajupolos">
+                    <div class="des">
+                        <span>PREMIUM</span>
+                        <h5>Baju Hitam Polos</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 id="price-product6">Rp30.000</h4>
                     </div>
-                    <h4>KOSONG</h4>
+                    <i class="fas fa-shopping-cart cart" onclick="addToCart('Baju Hitam Polos', 30000, 'photos/products/baju4.jpg')"></i>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="KOSONG" alt="">
-                <div class="des">
-                    <span>KOSONG</span>
-                    <h5>KOSONG</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="pro" id="product7" ondblclick="window.location.href='/shop/celpen1.html';">
+                    <img src="/photos/products/celpen1.jpg" alt="celanapendek">
+                    <div class="des">
+                        <span>PURPOSE</span>
+                        <h5>Cargo Pendek Pria Matt Fleece Polos</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 id="price-product7">Rp51.500</h4>
                     </div>
-                    <h4>KOSONG</h4>
+                    <i class="fas fa-shopping-cart cart" onclick="addToCart('Cargo Pendek Pria Matt Fleece', 51500, 'photos/products/celpen1.jpg')"></i>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="KOSONG" alt="">
-                <div class="des">
-                    <span>KOSONG</span>
-                    <h5>KOSONG</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="pro" id="product8" ondblclick="window.location.href='/shop/gamis1.html';">
+                    <img src="photos/products/gamis1.jpg" alt="gamis">
+                    <div class="des">
+                        <span>AIR FLOW</span>
+                        <h5>Gamis Polos Stylish</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 id="price-product8">Rp54.000</h4>
                     </div>
-                    <h4>KOSONG</h4>
+                    <i class="fas fa-shopping-cart cart" onclick="addToCart('Gamis Polos Stylish', 54000, 'photos/products/gamis1.jpg')"></i>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="" alt="">
-                <div class="des">
-                    <span>KOSONG</span>
-                    <h5>KOSONG</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="pro" id="product9" ondblclick="window.location.href='/shop/jaket1.html';">
+                    <img src="/photos/products/jaket1.png" alt="jaket">
+                    <div class="des">
+                        <span>MOMBERT HODDIE</span>
+                        <h5>Jaket Hoodie Pria Wanita Tebal</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 id="price-product9">Rp150.000</h4>
                     </div>
-                    <h4>KOSONG</h4>
+                    <i class="fas fa-shopping-cart cart" onclick="addToCart('Jaket Hoddie Pria Wanita Tebal', 150000, 'photos/products/jaket1.png')"></i>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
+        </div>
+        <div class="to-shop">
+            <a href="shop.html">
+            <button class="shops">Lihat Lainya</button>
+            </a>
         </div>
     </section>
+    
 
-    <!-- Bagian LOGIN EMAIL -->
+    <!-- Bagian LOGIN  -->
 
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
-            <h4>Masuka Email</h4>
-            <p>Masukan Email Dan Mulai Berbelanja<span> Sekarang</span></p>
+            <h4>Apa anda sudah punya akun?</h4>
+            <p>Masukkan Email Dan Mulai Berbelanja<span> Sekarang</span></p>
         </div>
         <div class="form">
-            <input type="text" placeholder="Masukkan email anda">
-            <button class="normal">Sign Up</button>
+           <a href="login.html">
+            <button class="buttonsz">Login Untuk Berbelanja</button>
+            </a>
+            <h1>CEA SHOPPER</h1>
         </div>
     </section>
 
@@ -209,10 +234,10 @@
             <div class="follow">
                 <h4>Follow us</h4>
                 <div class="icon">
-                    <i class="fab fa-facebook-f">Bekantan TER</i>
-                    <i class="fab fa-twitter">BekantanOficcial</i>
-                    <i class="fab fa-instagram">BekantanCuyy</i>
-                    <i class="fab fa-youtube">Bekantan Gaming</i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
                 </div>
             </div>
         </div>
@@ -222,6 +247,56 @@
     </footer>
 
     <!-- JS LINK -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const loggedIn = localStorage.getItem("loggedIn") === "true";
+        const loginButton = document.querySelector(".buttonsz");
+
+    if (loggedIn) {
+        loginButton.textContent = "Logout";
+        loginButton.onclick = function () {
+        localStorage.removeItem("loggedIn");
+        localStorage.removeItem("username");
+        alert("Anda berhasil logout.");
+        window.location.reload();
+      };
+     }
+});
+
+ function loadProductPrices() {
+        const products = [
+            { id: "Kemeja Pria Lengan Pendek", elementId: "price-product2" },
+            { id: "Tas Ransel Sekolah Pria Wanita", elementId: "price-product3" },
+            { id: "JAKET HODDIE POLOS ORIGINAL", elementId: "price-product4" },
+            { id: "Screamous Long Pants Cargo", elementId: "price-product5" },
+            { id: "Baju Hitam Polos", elementId: "price-product6" },
+            { id: "Cargo Pria Matt Fleece", elementId: "price-product7" },
+            { id: "Gamis Polos Stylish", elementId: "price-product8" },
+            { id: "Jaket Hoddie Pria Wanita Tebal", elementId: "price-product9" },
+        ];
+
+        products.forEach(product => {
+            const savedPrice = JSON.parse(localStorage.getItem(product.id));
+            if (savedPrice) {
+                document.getElementById(product.elementId).textContent = `Rp${savedPrice.price}`;
+            }
+        });
+    }
+
+    window.onload = loadProductPrices;
+
+ function loadProductStatus() {
+            const hiddenProducts = JSON.parse(localStorage.getItem("hiddenProducts")) || [];
+            hiddenProducts.forEach(productId => {
+                const product = document.getElementById(productId);
+                if (product) product.style.display = "none";
+            });
+        }
+
+        loadProductStatus();
+
+</script>
+     
     <script src="js/script.js"></script>
 </body>
 </html>

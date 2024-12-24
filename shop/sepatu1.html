@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cea Shopper</title>
+
+    <!-- FONT--AWESOME CDN LINK -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+
+    <!--CSS LINK -->
+    <link rel="stylesheet" href="/css/singgleproduct.css">
+
+    <!--TAHAP 2-->
+
+</head>
+<body>
+
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <h2>Masukkan Data Diri dan Alamat</h2>
+            <form id="checkoutForm">
+                <label for="name">Nama Lengkap:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="number">Nomor Telp / Whatsapp:</label>
+                <input type="number" id="nomor" name="number" required>
+    
+                <label for="address">Alamat Lengkap:</label>
+                <textarea id="address" name="address" required></textarea>
+    
+                <label for="shipping">Pilih Paket Pengiriman:</label>
+                <select id="shipping" name="shipping">
+                    <option value="standard">Standard (4 hari)</option>
+                    <option value="express">Express (2 hari)</option>
+                </select>
+    
+                <button class="buttony" type="submit">Kirim</button>
+                <button class="buttony" type="button" id="cancelCheckout">Batal</button>
+            </form>
+        </div>
+    </div>
+
+    <!--HEADER-->
+
+
+    <section id="header">
+        <div style="display: flex; align-items: center;">
+            <img src="/photos/ss.jpg" style="border-radius: 20px; width: 50px; height: auto;" class="logo" alt="">
+            <p style="margin-left: 10px; margin: 10px; font-family: 'Times New Roman', Times, serif; font-size: 20px;" >The Cea Shopper</p>
+          </div>
+        <div>
+            <ul id="navbar">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/shop.html">Shop</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="/cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="#"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <div id="confirmAst" class="confirm-modal">
+        <div class="confirm-modal-content">
+            <p id="confirmMessage"></p>
+            <div class="confirm-buttons">
+                <button id="confirmYes" class="confirm-btn">Tambahkan</button>
+                <button id="confirmNo" class="confirm-btn">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="productdetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="/photos/products/sepatu1.jpg" width="100%" id="MainImg" alt="ori">
+            <div class="small-image-group">
+                <div class="small-img-col">
+                    <img src="/photos/products/sepatu1.jpg" width="100%" class="small-img" alt="oriduplic1">
+                </div>
+                <div class="small-img-col">
+                    <img src="/photos/products/sepatu2.jpg" width="100%" class="small-img" alt="warna2">
+                </div>
+                <div class="small-img-col">
+                    <img src="/photos/products/sepatu3.jpg" width="100%" class="small-img" alt="warna3">
+                </div>
+                <div class="small-img-col">
+                    <img src="/photos/products/sepatu4.jpg" width="100%" class="small-img" alt="oriview">
+                </div>
+            </div>
+        </div>
+        <div class="single-pro-details">
+            <h6>Shop / Sepatu</h6>
+            <h4>Working Sneakers For You Sepatu Ujung Besi Fashion Pria Code G-17 Size 39 – 43</h4>
+            <h2>Rp122.000</h2>
+            <select>
+                <option>Pilih Ukuran</option>
+                <option>38</option>
+                <option>39</option>
+                <option>40</option>
+                <option>41</option>
+            </select>
+            <input type="number" value="1">
+            <button onclick="openCheckoutModal('1', 'Screamous Long Pants', 122000, 'photos/products/celana1.jpg')" class="buy">BELI</button>
+            <button class="buy">
+                <i class="fas fa-shopping-cart cart" onclick="addToCart('Sepatu Ujung Besi', 122000, 'photos/products/sepatu1.jpg')"> Tambahkan</i>
+                </button>
+                
+                <div class="color-selected">
+                    <h4>Pilihan Warna</h4>
+    
+                    <form>
+                        
+                        <input type="button" id="warna1" name="warna" style="background-color: rgb(69, 20, 20);">
+                        <input type="button" id="warna2" name="warna" style="background-color: rgb(0, 0, 0);">
+                        <input type="button" id="warna3" name="warna" style="background-color: rgb(80, 67, 32);">
+                        <input type="button" id="warna4" name="warna" style="background-color: rgb(48, 48, 80);">
+                        
+                    </form>
+                </div>
+        </div>
+    </section>
+
+    <section id="" class="section-p0">
+        <h4>Spesifikasi Produk</h4><br>
+        <div class="specs">
+            <ul>
+                <li><strong>Kategori:</strong>Cea Shopper > Shop > Sepatu Ujung Besi</li>
+                <li><strong>Stok:</strong> 50</li>
+                <li><strong>Merek:</strong>WORKING SNEAKERS FOR YOU</li>
+                <li><strong>Gaya:</strong> Indonesia</li>
+                <li><strong>Motif:</strong> Polos</li>
+                <li><strong>Produk Custom:</strong> Tidak</li>
+                <li><strong>Negara Asal:</strong> Indonesia</li>
+                <li><strong>Dikirim Dari:</strong> Kota Surabaya</li>
+            </ul>
+        </div>
+        <h4>Deskripsi Produk</h4><br>
+        <div class="description">
+            <p class="important">Ready banyak
+                <br>- brand WORKING
+                <br>- size 38/39/40/41/42/43
+                <br>- include box
+                <br>- real pick ( Hasil foto sendiri, Hasil video sendiri )
+                <br>- stock banyak
+                <br>- Material : Rubber, PU Leather,Safety Shoes
+                Ukuran Sepatu Pria
+                </p>
+            <p class="important"></p>
+            <br>
+            <br>
+            <p class="important">Ukuran Sepatu Pria:</p>
+            <p class="importants">38 = 24cm</p>
+            <p class="importants">39 = 24,5cm</p>
+            <p class="importants">40 = 25,5cm</p>
+            <p class="importants">41 = 26 cm</p>
+            <p class="importants">42 = 26,5cm</p>
+            <br>
+            <p class="important">NOTES: ADANYA KEMUNGKINAN PERBEDAAN SEDIKIT WARNA KARENA EFEK CAHAYA</p>
+        </div>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Product Lainya</h2>
+        <p>Baju Dengan Desain Modern Kekinian</p>
+        <div class="pro-container">
+            <div class="pro" ondblclick="window.location.href='/shop/celpan1.html';">
+                <img src="/photos/products/celana3.jpg" alt="celana p1">
+                <div class="des">
+                    <span>SIERA GREY</span>
+                    <h5>Screamous Long Pants</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rp136.000</h4>
+                </div>
+                <i class="fas fa-shopping-cart cart" onclick="addToCart('Screamous Long Pants', 136000, 'photos/products/celpan1.jpg')"></i>
+            </div>
+            <div class="pro" ondblclick="window.location.href='/shop/hoddie1.html';">
+                <img src="/photos/products/hoddie2.jpg" alt="hoddie p2">
+                <div class="des">
+                    <span>MOMBERT HODDIE</span>
+                    <h5>Jaket Hoddie Pria Wanita Tebal</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rp50.000</h4>
+                </div>
+                <i class="fas fa-shopping-cart cart" onclick="addToCart('JAKET HODDIE POLOSAN ORIGINAL', 50000, 'photos/products/hoddie1.jpg')"></i>
+            </div>
+            <div class="pro" ondblclick="window.location.href='/shop/ransel1.html';">
+                <img src="/photos/products/ransel.jpg" alt="ransel p3">
+                <div class="des">
+                    <span>BETTERHALF</span>
+                    <h5>Tas Ransel Sekolah Pria Wanita Multifungsi</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rp45.000</h4>
+                </div>
+                <i class="fas fa-shopping-cart cart" onclick="addToCart('Tas Ransel Sekolah Pria Wanita', 45000, 'photos/products/ransel1.jpg')"></i>
+            </div>
+            <div class="pro"ondblclick="window.location.href='/shop/celpen1.html';">
+                <img src="/photos/products/celpen1.jpg" alt="CELANA P4">
+                <div class="des">
+                    <span>PURPOSE</span>
+                    <h5>Cargo Pendek Pria Matt Fleece</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rp51.500</h4>
+                </div>
+                <i class="fas fa-shopping-cart cart" onclick="addToCart('Cargo Pendek Pria Matt Fleece', 51500, 'photos/products/celpen1.jpg')"></i>
+            </div>
+        </div>
+    </section>
+
+      <!-- Bagian LOGIN  -->
+
+  <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Apa anda sudah punya akun?</h4>
+        <p>Masukkan Email Dan Mulai Berbelanja<span> Sekarang</span></p>
+    </div>
+    <div class="form">
+       <a href="login.html">
+        <button class="buttonsz">Login Untuk Berbelanja</button>
+        </a>
+        <h1>CEA SHOPPER</h1>
+    </div>
+</section>
+
+    <!-- Fotter -->
+
+<footer class="section-p1">
+    <div class="col">
+        <img class="logo" src="kosong" alt="">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> Untag-Surabaya</p>
+        <p><strong>Phone:</strong> +62 87787409571</p>
+        <p><strong>Hours:</strong> 10:00 - 18:00, Senin - Sabtu</p>
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Tugas Semester 1 Pemrogaman Web  | &#169; 2024</p>
+    </div>
+</footer>
+
+<!-- JS LINK -->
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const loggedIn = localStorage.getItem("loggedIn") === "true";
+        const loginButton = document.querySelector(".buttonsz");
+
+    if (loggedIn) {
+        loginButton.textContent = "Logout";
+        loginButton.onclick = function () {
+        localStorage.removeItem("loggedIn");
+        localStorage.removeItem("username");
+        alert("Anda berhasil logout.");
+        window.location.reload();
+      };
+     }
+});
+    function loadProductData() {
+        const productName = "Sepatu Ujung Besi";
+        const productData = JSON.parse(localStorage.getItem(productName));
+    
+        if (productData) {
+            const priceElement = document.querySelector(".single-pro-details h2");
+            if (priceElement) {
+                priceElement.textContent = `Rp${productData.price}`;
+            }
+    
+            const stockElement = document.querySelector(".specs li:nth-child(2)");
+            if (stockElement) {
+                stockElement.innerHTML = `<strong>Stok:</strong> ${productData.stock}`;
+            }
+        }
+    }
+    window.onload = loadProductData;
+     </script>
+<script src="/js/script.js"></script>
+</body>
+</html>

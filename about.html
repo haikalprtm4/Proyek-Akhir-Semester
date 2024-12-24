@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cea Shopper</title>
+
+    <!-- FONT--AWESOME CDN LINK -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+
+    <!--CSS LINK -->
+    <link rel="stylesheet" href="css/about.css">
+
+    <!--TAHAP 1-->
+
+</head>
+<body>
+
+
+    <!--HEADER-->
+
+
+    <section id="header">
+        <div style="display: flex; align-items: center;">
+            <img src="photos/ss.jpg" style="border-radius: 20px; width: 50px; height: auto;" class="logo" alt="">
+            <p style="margin-left: 10px; margin: 10px; font-family: 'Times New Roman', Times, serif; font-size: 20px;" >The Cea Shopper</p>
+          </div>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="#"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+    </section>
+
+    <section id="about-head" class="section-p1">
+        <img src="/photos/about1.jpg" alt="">
+        <div style="margin-left: 20px;">
+            <h2>Tentang Kami</h2>
+            <p>Selamat datang di Cea Shopper, tujuan utama Anda untuk mencari produk berkualitas terbaik! 
+                Kami bersemangat untuk menghadirkan produk berkualitas tinggi, penuh gaya, dan terjangkau 
+                untuk meningkatkan penampilan Anda sehari-hari.
+            </p>
+        </div>
+    </section>
+    <section id="about-head" class="section-p1">
+        <div style="margin-right: 100px;">
+            <h2>Visi Dan Misi Kami</h2>
+            <p>Menjadi platform belanja online terkemuka yang menyediakan pengalaman berbelanja yang mudah, aman,
+                dan menyenangkan bagi pelanggan di seluruh dunia, dengan menawarkan produk berkualitas tinggi dan harga yang kompetitif.
+                Kami berkomitmen untuk menciptakan pengalaman belanja yang aman dan nyaman melalui sistem pembayaran yang terjamin,
+                pengiriman cepat, serta layanan pelanggan yang responsif.
+                Dengan terus meningkatkan keberagaman produk dan menerapkan teknologi terbaru,
+                kami berusaha untuk memenuhi berbagai kebutuhan dan preferensi pelanggan.
+                Kami juga berfokus pada transparansi transaksi dan kepuasan pelanggan,
+                serta berusaha menjadi mitra yang terpercaya bagi penjual dan pembeli dengan menyediakan peluang bisnis yang saling menguntungkan.
+            </p>
+        </div>
+        <img src="/photos/visibaner.jpg" alt="">
+        
+    </section>
+
+    <!-- Bagian LOGIN EMAIL -->
+     
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Apa anda sudah punya akun?</h4>
+            <p>Masukkan Email Dan Mulai Berbelanja<span> Sekarang</span></p>
+        </div>
+        <div class="form">
+            <a href="login.html">
+            <button class="buttonsz">Login Untuk Berbelanja</button>
+            </a>
+            <h1>CEA SHOPPER</h1>
+        </div>
+    </section>
+
+    <!-- Fotter -->
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="kosong" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Untag-Surabaya</p>
+            <p><strong>Phone:</strong> +62 87787409571</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Senin - Sabtu</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Tugas Semester 1 Pemrogaman Web  | &#169; 2024</p>
+        </div>
+    </footer>
+
+    <!-- JS LINK -->
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const loggedIn = localStorage.getItem("loggedIn") === "true";
+        const loginButton = document.querySelector(".buttonsz");
+
+    if (loggedIn) {
+        loginButton.textContent = "Logout";
+        loginButton.onclick = function () {
+        localStorage.removeItem("loggedIn");
+        localStorage.removeItem("username");
+        alert("Anda berhasil logout.");
+        window.location.reload();
+      };
+     }
+});
+     </script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
